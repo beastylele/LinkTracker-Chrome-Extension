@@ -1,2 +1,0 @@
-# LeadTracker-Chrome Extension
- 
