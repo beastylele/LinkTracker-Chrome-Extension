@@ -25,8 +25,8 @@ function render(leads) {
     ulEl.innerHTML = listItems  
 }
 
-tabBtn.addEventListener("click", function (tabs) {
-    chrome.tabs.query({active: true, currentWindow: true}, function() {
+tabBtn.addEventListener("click", function () {
+    chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
         myLeads.push(tabs[0].url)
         localStorage.setItem("myLeads", JSON.stringify(myLeads) )
         render(myLeads)
